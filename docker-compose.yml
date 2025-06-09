@@ -1,0 +1,22 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    volumes:
+      - ollama:/root/.ollama
+    ports: !reset
+    restart: always
+  pyllama:
+    container_name: pyllama
+    build:
+      dockerfile: py.Dockerfile
+    depends_on:
+      - ollama
+    ports:
+      - "80:80"
+    environment:
+      - OLLAMA_HOST=ollama
+
+volumes:
+  ollama:
+
