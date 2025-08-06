@@ -17,10 +17,10 @@ Make sure you are in the RAG_DSPy_Langchain directory with the docker-compose.ym
 
 ### Description ###
 This is a lightweight RAG web application for local development.  
-    1. We render HTML with FastAPI so you can interact with the app in your browser.
-    2. We scrape the link you enter with requests_html and parse it with BS4.
-    3. We embed the longest 30 sentences using a small, local Ollama model (qwen2.5:0.5b).
-    4. We save the embeddings in a vector store with ChromaDB.
-    5. We embed the question you type using the same model.
-    6. Your question embedding is passed to the DSPy agent to answer, the vector store is queried, and the agent generates a JSON response.
-    7. Your question embedding is passed to the LangChain agent to answer, the vector store is queried, and the agent generates a markdown response.
+1. We render HTML with FastAPI so you can interact with the app in your browser.  
+2. We scrape the link you enter with requests_html and parse it with BS4.  
+3. We embed the longest 30 sentences using a small, local Ollama model (qwen2.5:0.5b).  
+4. We save the embeddings in a vector store with ChromaDB.  
+5. We embed the question you type using the same model.  
+6. Your question embedding is passed to the DSPy agent to answer, the vector store is queried, and the agent generates a JSON response.  
+7. Your question embedding is passed to the LangChain agent to answer, the vector store is queried, and the agent generates a markdown response.  
